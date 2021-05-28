@@ -15,3 +15,18 @@ public class ValidationPhoneTest {
         Assert.assertTrue(current);
     }
 }
+
+
+//for validate email:
+
+//    val t1:String = "reut.b1212@gmail.com"
+//    val t2:String = "reut.b1212gmail.com"
+//    val t3:String = "reut@gmail"
+//    val t4:String = "reut.com@.com"
+//    val t5:String = "reut@sd.comdf"
+
+//    println(s"$t1 is ${ValidateEmail(t1)}")
+//    println(s"$t2 is ${ValidateEmail(t2)}")
+//    println(s"$t3 is ${ValidateEmail(t3)}")
+//    println(s"$t4 is ${ValidateEmail(t4)}")
+//    println(s"$t5 is ${ValidateEmail(t5)}")

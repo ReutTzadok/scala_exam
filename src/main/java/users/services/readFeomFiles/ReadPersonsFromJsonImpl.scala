@@ -2,7 +2,7 @@ package users.services.readFeomFiles
 import org.json4s.DefaultFormats
 import org.json4s.native.JsonMethods.parse
 import org.springframework.stereotype.Component
-import users.model.Person
+import users.model.{Person}
 
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
