@@ -1,0 +1,29 @@
+[
+  {
+    "min_age": "5",
+    "max_age": "40",
+    "gender": "female",
+    "prefix_name": "Reut",
+    "marital_Status": "married",
+    "number_of_Children": "1"
+  },
+  {
+    "min_age": "5",
+    "max_age": "40",
+    "gender": "male",
+    "prefix_name": "Brad",
+    "marital_Status": "married",
+    "number_of_Children": "2"
+  },
+  {
+    "min_age": "20",
+    "max_age": "30",
+    "gender": "female"
+  },
+  {
+    "min_age": "20",
+    "max_age": "30",
+    "gender": "male",
+    "prefix_name": "J"
+  }
+]
