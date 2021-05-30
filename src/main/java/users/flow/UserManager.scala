@@ -17,9 +17,8 @@ class UserManager {
 
 
   def flow() : Unit = {
+    println("Users management starts")
     val users: List[User] = readDate.gatValidUsers
-
-    println(s"user manager ${users.size}")
 
     requestsManagement.manageRequests(users)
 

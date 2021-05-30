@@ -26,7 +26,8 @@ class ReadPersonsFromJson extends ReadPersons {
     val peopleBuffer = new ListBuffer[Person]()
     people.foreach(p => peopleBuffer+=p)
 
-    println(peopleBuffer.size)
+    println("Reading all people")
+
     peopleBuffer
 
   }

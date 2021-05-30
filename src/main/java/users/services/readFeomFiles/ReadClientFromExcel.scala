@@ -26,8 +26,8 @@ class ReadClientFromExcel extends ReadClients {
     val clientsBuffer = new ListBuffer[Client]()
     clients.foreach(c => clientsBuffer+=c)
 
-    println(s"there is ${clientsBuffer.size} clients")
-    println(s"first client is: \n${clientsBuffer.head}")
+    println("Reading all clients")
+
 
     clientsBuffer
   }

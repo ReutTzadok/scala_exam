@@ -19,9 +19,6 @@ class ReadRequestsFromJson extends ReadRequest {
 
     val requests = parse(jsonRequests).extract[List[Request]]
 
-    println(s"there is ${requests.size} requests")
-    println(s"first request is: \n${requests.head}")
-
     requests
   }
 }
