@@ -4,7 +4,6 @@ import users.model.{Client, Person, User}
 
 import scala.language.implicitConversions
 
-//object PersonToUserAdapter {
 object Adapter {
   implicit def adapter (p: Person) : User = {
     User(age=p.age, name= p.name, gender= p.gender, email=p.email, phone=p.phone)

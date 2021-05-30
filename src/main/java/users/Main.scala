@@ -6,10 +6,6 @@ import users.flow.UserManager
 
 
 
-//todo last - create better test with scala's library
-
-
-
 @SpringBootApplication
 class Application
 

@@ -1,6 +1,6 @@
 package users.services.readFeomFiles
 
-import users.model.{Person}
+import users.model.Person
 
 import scala.collection.mutable.ListBuffer
 
