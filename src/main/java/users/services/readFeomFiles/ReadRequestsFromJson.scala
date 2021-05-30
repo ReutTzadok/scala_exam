@@ -2,12 +2,12 @@ package users.services.readFeomFiles
 import users.model.Request
 import org.json4s.DefaultFormats
 import org.json4s.native.JsonMethods.parse
+import org.springframework.stereotype.Component
 
-import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
 
-
+@Component
 class ReadRequestsFromJson extends ReadRequest {
   implicit val formats: DefaultFormats.type = DefaultFormats
 

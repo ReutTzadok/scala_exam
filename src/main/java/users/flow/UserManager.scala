@@ -1,16 +1,19 @@
 package users.flow
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-import users.model.{Request, User}
-import users.services.filters.{RequestHandle, RequestHandleImpl}
+import users.model.User
+
 
 
 
 @Component
 class UserManager {
-  //todo add annotations
-  val readDate:ReadData = new ReadData
-  val requestsManagement: RequestsManagement = new RequestsManagement
+  @Autowired
+  val readDate:ReadData = null
+
+  @Autowired
+  val requestsManagement: RequestsManagement = null
 
 
   def flow() : Unit = {

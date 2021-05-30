@@ -1,8 +1,7 @@
 package users
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.SpringApplication
-import org.springframework.context.ConfigurableApplicationContext
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import users.flow.UserManager
 
 
@@ -17,10 +16,8 @@ class Application
 object Main {
 
   def main(args: Array[String]): Unit = {
+    val context = new AnnotationConfigApplicationContext("users")
 
-    val context: ConfigurableApplicationContext = SpringApplication.run(classOf[Application], args: _*)
-    val userManager: UserManager = context.getBean(classOf[UserManager])
-
-    userManager.flow()
+    context.getBean(classOf[UserManager]).flow()
   }
 }

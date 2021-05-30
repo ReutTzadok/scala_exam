@@ -1,25 +1,21 @@
 package users.services.validation
-import users.model.{User}
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
+import users.model.User
 
+
+@Component
 class UserValidatorImpl extends UserValidator {
-  //todo add annotations
-  //  @BeanProperty
-  //  @Autowired
-  //  var validateAge: ValidateAge = null
-  //
-  //  @BeanProperty
-  //  @Autowired(required = false)
-  //  val validateEmail: ValidateEmail = null
-  //
-  //  @BeanProperty
-  //  @Autowired(required = false)
-  //  val validatePhone: ValidatePhone = null
+    @Autowired
+    var validateAge: ValidateAge = null
 
-  val validateAge: ValidateAge = new ValidateAgeImpl
+    @Autowired
+    val validateEmail: ValidateEmail = null
 
-  val validateEmail: ValidateEmail = new ValidateEmailImpl
+    @Autowired
+    val validatePhone: ValidatePhone = null
 
-  val validatePhone: ValidatePhone = new ValidatePhoneImpl
+
 
   //todo more validations
   //todo test validator

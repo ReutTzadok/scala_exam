@@ -22,8 +22,6 @@ class ReadPersonsFromJson extends ReadPersons {
 
     val people = parse(jsonPeople).extract[List[Person]]
 
-    //todo remove
-    println(people.size)
 
     val peopleBuffer = new ListBuffer[Person]()
     people.foreach(p => peopleBuffer+=p)

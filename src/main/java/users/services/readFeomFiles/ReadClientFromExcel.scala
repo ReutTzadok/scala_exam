@@ -1,13 +1,14 @@
 package users.services.readFeomFiles
 
 import users.model.Client
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.springframework.stereotype.Component
 
-import org.apache.poi.ss.usermodel.{ DataFormatter, WorkbookFactory, Row }
 import java.io.File
-import collection.JavaConversions._ // lets you iterate over a java iterable
-
+import collection.JavaConversions._
 import scala.collection.mutable.ListBuffer
 
+@Component
 class ReadClientFromExcel extends ReadClients {
   override def read(filePath: String): ListBuffer[Client] = {
     val f = new File(filePath)
@@ -29,11 +30,5 @@ class ReadClientFromExcel extends ReadClients {
     println(s"first client is: \n${clientsBuffer.head}")
 
     clientsBuffer
-
-//    var tmp = new ListBuffer[Client]
-//    tmp+=Client("fname", "lname","s", 10, "s", "s", "s", "d", 1200, "d", 0)
-//    tmp+=Client("Reut", "Tzadok","female", 26, "reut.b1212@gmail.com", "313-1234-12", "s", "d", 1200, "married", 1)
-//    tmp+=Client("fname", "Tzadok","male", 30, "omer@gmail.com", "313-1234-12", "s", "d", 1200, "married", 1)
-//    tmp+=Client("fname", "Tzadok","male", 3, "s", "s", "s", "313-1234-12", 1200, "single", 0)
   }
 }

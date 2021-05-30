@@ -1,16 +1,20 @@
 package users.services.writeToFile
-import users.model.{Request, User}
+import org.springframework.stereotype.Component
+import users.model.Request
 
 import java.io.{File, FileWriter}
-
 import java.time
 
+@Component
 class WriteRequestResultsImpl extends WriteRequestResults {
 
-  val path = "data/requests results/"
+  //todo application.properties
+  val resultsPath = "data/requests results/"
+
+
   override def write(results: String, request: Request): Unit = {
     val fileName: String = time.LocalDateTime.now().toString.replace("T","_").replace("-","").replace(":","")
-    val filePath = path + fileName + ".txt"
+    val filePath = resultsPath + fileName + ".txt"
 
     val result: String = request.toString+"\n"+results
 

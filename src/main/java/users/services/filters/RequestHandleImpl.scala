@@ -1,12 +1,15 @@
 package users.services.filters
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import users.model.{Request, User}
 import users.services.filters.Filters.FilterUsers
-import users.services.writeToFile.{WriteRequestResults, WriteRequestResultsImpl}
+import users.services.writeToFile.WriteRequestResults
 
 @Component
 class RequestHandleImpl extends RequestHandle {
-  val writeResults: WriteRequestResults = new WriteRequestResultsImpl
+
+  @Autowired
+  val writeResults: WriteRequestResults = null
 
   override def filter(request: Request, users: List[User]): Unit = {
 
