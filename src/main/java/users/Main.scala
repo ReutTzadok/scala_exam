@@ -3,7 +3,7 @@ package users
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.SpringApplication
 import org.springframework.context.ConfigurableApplicationContext
-import users.services.UserManager
+import users.flow.UserManager
 
 
 

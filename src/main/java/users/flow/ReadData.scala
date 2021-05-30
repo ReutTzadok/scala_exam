@@ -1,20 +1,20 @@
-package users.services
+package users.flow
 
 import users.model.{Client, Person, User}
 import users.services.adapters.Adapter._
-import users.services.readFeomFiles.{ReadClientFromExcelImpl, ReadClientsFromExcel, ReadPersonsFromJson, ReadPersonsFromJsonImpl}
+import users.services.readFeomFiles.{ReadClientFromExcel, ReadClients, ReadPersons, ReadPersonsFromJson}
+import users.services.validation.{UserValidator, UserValidatorImpl}
 
 import scala.collection.mutable.ListBuffer
-import users.services.validation.{UserValidator, UserValidatorImpl}
 
 class ReadData {
 
   val userValidator: UserValidator = new UserValidatorImpl
-  val readPersons: ReadPersonsFromJson = new ReadPersonsFromJsonImpl
-  val readClients: ReadClientsFromExcel = new ReadClientFromExcelImpl
+  val readPersons: ReadPersons = new ReadPersonsFromJson
+  val readClients: ReadClients = new ReadClientFromExcel
 
   def gatValidUsers: List[User] = {
-//    reas persons
+//    read persons
 //todo use application.properties
     //todo move to a class?
     val people: ListBuffer[Person] = readPersons.read("data/persons.json")//.toList
@@ -24,7 +24,7 @@ class ReadData {
     println(users.size)
 
 //    read clients
-    val clients: ListBuffer[Client] = readClients.read("blabla")
+    val clients: ListBuffer[Client] = readClients.read("data/client.xls")
     clients.foreach(c => if (userValidator.validate(c)) users+=c)
 
     println(users.size)
